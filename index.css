@@ -4,32 +4,51 @@ body, html {
     padding: 0;
     font-family: Arial, sans-serif;
     color: #333;
+    box-sizing: border-box;
 }
 
 /* Banner Section */
 .header .banner {
     width: 100%;
-    height: 18vh; /* 18% of viewport height for responsiveness */
+    height: 18vh; /* 18% of viewport height */
     overflow: hidden;
     position: relative;
 }
 
 .header .banner img {
-    width: 100vw; /* Full viewport width */
+    width: 100%; /* Full container width */
     height: auto;
     object-fit: cover; /* Image fills the banner */
-    transform: translateY(-50%); /* Keeps the image aligned */
+    position: relative;
+    z-index: -1; /* Keeps image behind navbar */
 }
 
 /* Navbar Styling */
 .navbar {
     display: flex;
     align-items: center;
+    justify-content: space-between; /* Space between name and links */
     background-color: #06283D;
-    padding: 0.8rem 2rem;
-    margin: 0;
-    position: relative; /* Ensures it stays connected to the banner */
-    top: -4px; /* Visually overlaps slightly with the banner */
+    padding: 0.8rem 1rem; /* Adjusted padding for better fit on mobile */
+    position: sticky; /* Keeps navbar visible when scrolling */
+    top: 0;
+    z-index: 100;
+}
+
+#name {
+    font-size: 1.2rem; /* Smaller font size for better scaling */
+    font-weight: bold;
+    color: white;
+}
+
+#name a {
+    text-decoration: none;
+    color: white;
+    white-space: nowrap; /* Prevents wrapping of the name */
+}
+
+#name a:hover {
+    color: #FF6F61;
 }
 
 .nav {
@@ -37,29 +56,17 @@ body, html {
     list-style: none;
     margin: 0;
     padding: 0;
-    gap: 1.5rem; /* Space between navigation items */
-    flex: 1; /* Flex-grow to ensure spacing is even */
+    gap: 1rem; /* Reduced space between links */
 }
 
-#name {
-    margin-right: auto; /* Pushes all other items to the right */
-}
-
-#name a {
-    font-size: 1.5rem;
-    font-weight: bold;
-    text-decoration: none;
-    color: white;
-}
-
-#name a:hover {
-    color: #FF6F61;
+.nav li {
+    margin: 0;
 }
 
 .nav li a {
     text-decoration: none;
     color: white;
-    font-size: 1.2rem;
+    font-size: 0.9rem; /* Reduced font size for better scaling */
 }
 
 .nav li a:hover {
@@ -83,16 +90,49 @@ footer {
 }
 
 /* Responsive Design */
+/* Tablet and Medium Screens */
 @media (max-width: 768px) {
     .navbar {
         flex-direction: column;
         align-items: center;
+        text-align: center;
+        padding: 1rem;
     }
     .nav {
-        flex-direction: column;
-        gap: 1rem;
+        flex-direction: column; /* Stack links vertically */
+        gap: 0.8rem; /* Adjust spacing for stacked links */
     }
     #name {
-        margin-right: 0; /* Center-align on smaller screens */
+        margin-bottom: 0.5rem; /* Add spacing between name and links */
+        font-size: 1.5rem; /* Slightly larger name for medium screens */
+    }
+    #name a {
+        font-size: 1.2rem;
+    }
+    .nav li a {
+        font-size: 1rem; /* Adjust link font size */
+    }
+}
+
+/* Mobile and Small Screens */
+@media (max-width: 480px) {
+    .navbar {
+        padding: 0.5rem 0.8rem;
+    }
+    #name {
+        font-size: 1rem; /* Smaller name font size */
+        margin-bottom: 0.5rem;
+    }
+    #name a {
+        font-size: 1rem;
+    }
+    .nav li a {
+        font-size: 0.85rem; /* Smaller font size for links */
+    }
+    .nav {
+        gap: 0.5rem; /* Reduce spacing for stacked links */
+    }
+    main {
+        padding: 1rem; /* Adjust padding for smaller screens */
     }
 }
