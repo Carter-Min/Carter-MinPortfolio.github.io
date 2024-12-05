@@ -3,136 +3,153 @@ body, html {
     margin: 0;
     padding: 0;
     font-family: Arial, sans-serif;
-    color: #333;
-    box-sizing: border-box;
+    color: #AFC8DB;
+    background-color: #092033; /* Contrasting background for outermost container */
+}
+
+.container {
+    background-color: #112433; /* Main section background color */
+    padding: 2rem 0; /* Adds spacing above and below sections */
 }
 
 /* Banner Section */
 .header .banner {
     width: 100%;
-    height: 18vh; /* 18% of viewport height */
+    height: 18vh;
     overflow: hidden;
-    position: relative;
+    background-color: #112433;
 }
 
 .header .banner img {
-    width: 100%; /* Full container width */
-    height: auto;
-    object-fit: cover; /* Image fills the banner */
-    position: relative;
-    z-index: -1; /* Keeps image behind navbar */
+    width: 100vw;
+    object-fit: cover;
+    transform: translateY(-50%);
 }
 
 /* Navbar Styling */
 .navbar {
     display: flex;
     align-items: center;
-    justify-content: space-between; /* Space between name and links */
-    background-color: #06283D;
-    padding: 0.8rem 1rem; /* Adjusted padding for better fit on mobile */
-    position: sticky; /* Keeps navbar visible when scrolling */
-    top: 0;
-    z-index: 100;
-}
-
-#name {
-    font-size: 1.2rem; /* Smaller font size for better scaling */
-    font-weight: bold;
-    color: white;
-}
-
-#name a {
-    text-decoration: none;
-    color: white;
-    white-space: nowrap; /* Prevents wrapping of the name */
-}
-
-#name a:hover {
-    color: #FF6F61;
+    background-color: #112433;
+    padding: 0.8rem 2rem;
 }
 
 .nav {
     display: flex;
     list-style: none;
-    margin: 0;
-    padding: 0;
-    gap: 1rem; /* Reduced space between links */
+    gap: 1.5rem;
+    flex: 1;
+    justify-content: flex-end;
 }
 
-.nav li {
-    margin: 0;
+#name {
+    margin-right: auto;
 }
 
-.nav li a {
+#name a, .nav li a {
     text-decoration: none;
-    color: white;
-    font-size: 0.9rem; /* Reduced font size for better scaling */
+    color: #AFC8DB;
+    font-size: 1.2rem;
 }
 
-.nav li a:hover {
+#name a {
+    font-size: 1.5rem;
+    font-weight: bold;
+}
+
+#name a:hover, .nav li a:hover {
     color: #FF6F61;
     text-decoration: underline;
 }
 
-/* Main Content */
-main {
+/* Profile Section */
+.profile-container {
+    display: flex;
+    align-items: center;
+    gap: 2rem;
     padding: 2rem;
-    text-align: center;
+    background-color: #112433;
+    text-align: left;
+}
+
+.profile-image img {
+    width: 175px;
+    height: 200px;
+    border-radius: 20px;
+    object-fit: cover;
+    border: 3px solid #AFC8DB;
+    box-shadow: 0 4px 8px rgba(0, 0, 0, 0.2);
+}
+
+.profile-description {
+    max-width: 600px;
+}
+
+.profile-description h2 {
+    font-size: 1.8rem;
+    margin-bottom: 1rem;
+}
+
+.profile-description p {
+    font-size: 1rem;
+    line-height: 1.5;
+    margin-bottom: 1rem;
 }
 
 /* Footer */
 footer {
-    background-color: #06283D;
-    color: white;
+    background-color: #112433;
+    color: #AFC8DB;
     text-align: center;
     padding: 1rem;
     margin-top: 2rem;
 }
 
+/* Add spacing between header, body, and footer */
+header, main, footer {
+    margin-bottom: 1rem; /* Space between sections */
+    border-bottom: 1px solid #AFC8DB; /* Optional: Adds a subtle divider */
+}
+
 /* Responsive Design */
-/* Tablet and Medium Screens */
 @media (max-width: 768px) {
     .navbar {
         flex-direction: column;
         align-items: center;
-        text-align: center;
-        padding: 1rem;
     }
+
     .nav {
-        flex-direction: column; /* Stack links vertically */
-        gap: 0.8rem; /* Adjust spacing for stacked links */
+        flex-direction: column;
+        gap: 1rem;
     }
+
     #name {
-        margin-bottom: 0.5rem; /* Add spacing between name and links */
-        font-size: 1.5rem; /* Slightly larger name for medium screens */
+        margin-right: 0;
     }
-    #name a {
-        font-size: 1.2rem;
+
+    .profile-container {
+        flex-direction: column;
+        align-items: center;
+        padding: 1rem;
+        text-align: center;
     }
-    .nav li a {
-        font-size: 1rem; /* Adjust link font size */
+
+    .profile-image img {
+        width: 120px;
+        height: 120px;
+    }
+
+    .profile-description h2 {
+        font-size: 1.5rem;
+    }
+
+    .profile-description p {
+        font-size: 0.9rem;
     }
 }
 
-/* Mobile and Small Screens */
 @media (max-width: 480px) {
-    .navbar {
-        padding: 0.5rem 0.8rem;
-    }
-    #name {
-        font-size: 1rem; /* Smaller name font size */
-        margin-bottom: 0.5rem;
-    }
-    #name a {
-        font-size: 1rem;
-    }
-    .nav li a {
-        font-size: 0.85rem; /* Smaller font size for links */
-    }
-    .nav {
-        gap: 0.5rem; /* Reduce spacing for stacked links */
-    }
-    main {
-        padding: 1rem; /* Adjust padding for smaller screens */
+    .profile-description p {
+        font-size: 0.85rem;
     }
 }
