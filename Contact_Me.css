@@ -1,0 +1,113 @@
+/* General Styles */
+body, html {
+    margin: 0;
+    padding: 0;
+    font-family: Arial, sans-serif;
+    color: #AFC8DB;
+    background-color: #1A1F23; /* Unique background for About Me page */
+}
+
+.header .banner {
+    width: 100%;
+    height: 18vh;
+    overflow: hidden;
+    background-color: #112433;
+}
+
+.header .banner img {
+    width: 100%;
+    height: auto;
+    object-fit: cover;
+    transform: translateY(-50%);
+}
+
+/* Navbar Styling */
+.navbar {
+    display: flex;
+    align-items: center;
+    background-color: #112433;
+    padding: 0.8rem 2rem;
+    margin-bottom: 1rem; /* Space below the navbar */
+    border-radius: 8px; /* Matches container edges */
+}
+
+.nav {
+    display: flex;
+    list-style: none;
+    gap: 1.5rem;
+    flex: 1;
+    justify-content: flex-end; /* Align nav items to the right */
+}
+
+#name {
+    margin-right: auto; /* Push name to the left */
+}
+
+#name a {
+    font-size: 1.5rem;
+    font-weight: bold;
+    text-decoration: none;
+    color: #AFC8DB;
+}
+
+#name a:hover {
+    color: #FF6F61;
+    text-decoration: underline;
+}
+
+.nav li a {
+    text-decoration: none;
+    color: #AFC8DB;
+    font-size: 1.2rem;
+}
+
+.nav li a:hover {
+    color: #FF6F61;
+    text-decoration: underline;
+}
+
+/* Content Styling */
+.content {
+    padding: 2rem;
+    max-width: 800px;
+    margin: auto;
+    background-color: #292F33;
+    border-radius: 10px;
+    box-shadow: 0 4px 8px rgba(0, 0, 0, 0.2);
+    color: #AFC8DB;
+}
+
+.content h2 {
+    font-size: 2rem;
+    margin-bottom: 1rem;
+}
+
+.content p {
+    line-height: 1.6;
+    margin-bottom: 1rem;
+}
+
+/* Footer */
+footer {
+    text-align: center;
+    padding: 1rem;
+    background-color: #112433;
+    color: #AFC8DB;
+}
+
+/* Responsive Design */
+@media (max-width: 768px) {
+    .navbar {
+        flex-direction: column;
+        align-items: center;
+    }
+
+    .nav {
+        flex-direction: column;
+        gap: 1rem;
+    }
+
+    #name {
+        margin-right: 0; /* Center-align on smaller screens */
+    }
+}
