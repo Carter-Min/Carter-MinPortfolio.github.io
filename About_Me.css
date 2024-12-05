@@ -1,16 +1,14 @@
-/* General Styles */
 body, html {
     margin: 0;
     padding: 0;
     font-family: Arial, sans-serif;
     color: #AFC8DB;
-    background-color: #1A1F23; /* Unique background for the About Me page */
+    background-color: #1A1F23;
     display: flex;
     flex-direction: column;
     height: 100%;
 }
 
-/* Header Section */
 .header .banner {
     width: 100%;
     height: 18vh;
@@ -25,13 +23,13 @@ body, html {
     transform: translateY(-50%);
 }
 
-/* Navbar Styling */
+
 .navbar {
     display: flex;
     align-items: center;
     background-color: #112433;
     padding: 0.8rem 2rem;
-    margin-bottom: 1rem; /* Space below the navbar */
+    margin-bottom: 1rem; 
 }
 
 .nav {
@@ -39,11 +37,11 @@ body, html {
     list-style: none;
     gap: 1.5rem;
     flex: 1;
-    justify-content: flex-end; /* Align nav items to the right */
+    justify-content: flex-end;
 }
 
 #name {
-    margin-right: auto; /* Push name to the left */
+    margin-right: auto; 
 }
 
 #name a {
@@ -69,16 +67,16 @@ body, html {
     text-decoration: underline;
 }
 
-/* Content Styling */
+
 .content {
     padding: 2rem;
     max-width: 800px;
-    margin: 3rem auto; /* Centering the content with equal space on all sides */
+    margin: 3rem auto; 
     background-color: #292F33;
     border-radius: 10px;
     box-shadow: 0 4px 8px rgba(0, 0, 0, 0.2);
     color: #AFC8DB;
-    flex: 1; /* Ensures the content takes available space */
+    flex: 1; 
 }
 
 .content h2 {
@@ -118,16 +116,15 @@ body, html {
     color: #FF6F61;
 }
 
-/* Footer */
+
 footer {
     text-align: center;
     padding: 1rem;
     background-color: #112433;
     color: #AFC8DB;
-    margin-top: auto; /* Pushes the footer to the bottom */
+    margin-top: auto; 
 }
 
-/* Responsive Design */
 @media (max-width: 768px) {
     .navbar {
         flex-direction: column;
@@ -140,15 +137,15 @@ footer {
     }
 
     #name {
-        margin-right: 0; /* Center-align on smaller screens */
+        margin-right: 0; 
     }
 
     .content {
-        padding: 1.5rem; /* Adjust padding for smaller screens */
-        max-width: 100%; /* Ensure content is fully responsive */
+        padding: 1.5rem; 
+        max-width: 100%; 
     }
 
     .project-thumbnail {
-        width: 100%; /* Ensures thumbnails are responsive */
+        width: 100%; 
     }
 }
