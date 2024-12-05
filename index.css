@@ -4,12 +4,15 @@ body, html {
     padding: 0;
     font-family: Arial, sans-serif;
     color: #AFC8DB;
-    background-color: #092033; /* Contrasting background for outermost container */
+    background-color: #000000; /* Contrasting background for the outermost container */
 }
 
+/* Wrapper for Main Content */
 .container {
-    background-color: #112433; /* Main section background color */
-    padding: 2rem 0; /* Adds spacing above and below sections */
+    background-color: #112433; /* Main section background */
+    padding: 2rem 0; /* Adds space around the content */
+    margin: 1rem 0; /* Space between sections */
+    border-radius: 8px; /* Smooth edges for contrast against the background */
 }
 
 /* Banner Section */
@@ -32,6 +35,8 @@ body, html {
     align-items: center;
     background-color: #112433;
     padding: 0.8rem 2rem;
+    margin-bottom: 1rem; /* Space below the navbar */
+    border-radius: 8px; /* Matches container's edges */
 }
 
 .nav {
@@ -70,6 +75,7 @@ body, html {
     padding: 2rem;
     background-color: #112433;
     text-align: left;
+    border-radius: 8px; /* Matches container edges */
 }
 
 .profile-image img {
@@ -102,13 +108,13 @@ footer {
     color: #AFC8DB;
     text-align: center;
     padding: 1rem;
-    margin-top: 2rem;
+    margin-top: 1rem;
+    border-radius: 8px; /* Matches container edges */
 }
 
 /* Add spacing between header, body, and footer */
 header, main, footer {
-    margin-bottom: 1rem; /* Space between sections */
-    border-bottom: 1px solid #AFC8DB; /* Optional: Adds a subtle divider */
+    margin-bottom: 1rem;
 }
 
 /* Responsive Design */
